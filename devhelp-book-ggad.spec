@@ -34,7 +34,7 @@ install book/*.html $RPM_BUILD_ROOT%{_prefix}/books/ggad
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files
 %defattr(644,root,root,755)
 %{_prefix}/books/*
 %{_prefix}/specs/*
