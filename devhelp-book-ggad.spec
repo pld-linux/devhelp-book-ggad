@@ -1,5 +1,5 @@
 Summary:	DevHelp book: ggad
-Summary(pl):	Ksi±¿ka do DevHelp'a o ggad
+Summary(pl):	Ksi±¿ka do DevHelpa o ggad
 Name:		devhelp-book-ggad
 Version:	1.0
 Release:	1
@@ -11,36 +11,29 @@ Requires:	devhelp
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6/share/devhelp/
+%define		_prefix		/usr/X11R6/share/devhelp
 
 %description
-DevHelp book about ggad
+DevHelp book about ggad.
 
 %description -l pl
-Ksi±¿ka do DevHelp o ggad
+Ksi±¿ka do DevHelpa o ggad.
 
 %prep
-%setup -q -c ggad -n ggad
-
-%build
-mv -f book ggad
-mv -f book.devhelp ggad.devhelp
+%setup -q -c -n ggad
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_prefix}/{books/ggad/figures,specs}
 
-#install -d $RPM_BUILD_ROOT%{_prefix}/books/ggad
-install -d $RPM_BUILD_ROOT%{_prefix}/books/ggad/figures
-install -d $RPM_BUILD_ROOT%{_prefix}/specs
-install ggad.devhelp $RPM_BUILD_ROOT%{_prefix}/specs
-install ggad/figures/* $RPM_BUILD_ROOT%{_prefix}/books/ggad/figures/
-install ggad/*.html $RPM_BUILD_ROOT%{_prefix}/books/ggad/
+install book.devhelp $RPM_BUILD_ROOT%{_prefix}/specs/ggad.devhelp
+install book/figures/* $RPM_BUILD_ROOT%{_prefix}/books/ggad/figures
+install book/*.html $RPM_BUILD_ROOT%{_prefix}/books/ggad
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files 
 %defattr(644,root,root,755)
-#%doc *.gz
-%{_prefix}/books
-%{_prefix}/specs
+%{_prefix}/books/*
+%{_prefix}/specs/*
