@@ -1,5 +1,5 @@
 Summary:	DevHelp book: ggad
-Summary(pl):	Ksi±¿ka do DevHelpa o ggad
+Summary(pl.UTF-8):   KsiÄ…Å¼ka do DevHelpa o ggad
 Name:		devhelp-book-ggad
 Version:	1.0
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DevHelp book about ggad.
 
-%description -l pl
-Ksi±¿ka do DevHelpa o ggad.
+%description -l pl.UTF-8
+KsiÄ…Å¼ka do DevHelpa o ggad.
 
 %prep
 %setup -q -c -n ggad
