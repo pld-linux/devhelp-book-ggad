@@ -1,5 +1,5 @@
 Summary:	DevHelp book: ggad
-Summary(pl.UTF-8):   Książka do DevHelpa o ggad
+Summary(pl.UTF-8):	Książka do DevHelpa o ggad
 Name:		devhelp-book-ggad
 Version:	1.0
 Release:	1
